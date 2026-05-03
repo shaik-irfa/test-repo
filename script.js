@@ -1,5 +1,54 @@
 // ====================================
-// FORM HANDLING
+// LOGIN FORM HANDLING
+// ====================================
+
+// Get the login form element
+const loginForm = document.getElementById('loginForm');
+const loginMessage = document.getElementById('loginMessage');
+
+// Add event listener for login form submission
+loginForm.addEventListener('submit', function(event) {
+    // Prevent the form from actually submitting to a server
+    event.preventDefault();
+
+    // Get form input values
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    // Check credentials: username = "admin" and password = "1234"
+    if (username === 'admin' && password === '1234') {
+        // Show success message
+        loginMessage.textContent = '✓ Login successful! Welcome admin.';
+        loginMessage.classList.add('success');
+        loginMessage.classList.remove('error');
+
+        // Show alert
+        alert('Login successful! Welcome to the website.');
+
+        // Clear the form fields
+        loginForm.reset();
+
+        // Remove the message after 3 seconds
+        setTimeout(function() {
+            loginMessage.textContent = '';
+            loginMessage.classList.remove('success');
+        }, 3000);
+    } else {
+        // Show error message
+        loginMessage.textContent = '✗ Invalid credentials. Please try again.';
+        loginMessage.classList.add('error');
+        loginMessage.classList.remove('success');
+
+        // Show alert
+        alert('Invalid credentials. Username: admin, Password: 1234');
+
+        // Clear only the password field for security
+        document.getElementById('password').value = '';
+    }
+});
+
+// ====================================
+// CONTACT FORM HANDLING
 // ====================================
 
 // Get the contact form element

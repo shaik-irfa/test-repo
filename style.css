@@ -208,6 +208,66 @@ body {
 }
 
 /* ====================================
+   LOGIN SECTION
+   ==================================== */
+
+.login {
+    padding: 80px 20px;
+    background-color: var(--light-color);
+}
+
+.login h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--dark-color);
+}
+
+.login-form {
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.login-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+#loginMessage {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#loginMessage.success {
+    color: #28a745;
+}
+
+#loginMessage.error {
+    color: #dc3545;
+}
+
+/* ====================================
    CONTACT SECTION
    ==================================== */
 
@@ -454,5 +514,10 @@ body {
     .form-group textarea {
         padding: 10px;
         font-size: 0.95rem;
+    }
+
+    /* Login Form - Mobile */
+    .login-form {
+        padding: 1.5rem;
     }
 }

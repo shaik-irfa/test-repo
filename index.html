@@ -16,6 +16,7 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#login" class="nav-link">Login</a></li>
             </ul>
         </div>
     </nav>
@@ -81,6 +82,42 @@
                     </p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="login">
+        <div class="container">
+            <h2>Login</h2>
+            <form class="login-form" id="loginForm">
+                <!-- Username Field -->
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        placeholder="Enter your username" 
+                        required
+                    >
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Enter your password" 
+                        required
+                    >
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="login-button">Login</button>
+            </form>
+            <p id="loginMessage"></p>
         </div>
     </section>
 
